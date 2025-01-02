@@ -35,6 +35,27 @@ rules:
 - apiGroups: [""]
   resources: ["services"]
   verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+  # Allow management of Replication Controllers
+- apiGroups: [""]
+  resources: ["replicationcontrollers"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+  # Allow management of DaemonSets
+- apiGroups: ["apps"]
+  resources: ["daemonsets"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+   # Allow management of StatefulSets
+- apiGroups: ["apps"]
+  resources: ["statefulsets"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+- apiGroups: ["autoscaling"]
+  resources: ["horizontalpodautoscalers"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+- apiGroups: ["batch"]
+  resources: ["cronjobs"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["create", "delete", "get", "list", "patch", "update", "watch"]
   # Allow management of Ingresses
 - apiGroups: ["networking.k8s.io"]
   resources: ["ingresses"]
