@@ -4,7 +4,7 @@ import pyunycode
 
 separator = "---"
 
-service_account_t = """
+serviceaccount_t = """
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -67,7 +67,7 @@ roleRef:
 
 
 resource_map = {
-    "serviceaccount": namespace_t,
+    "serviceaccount": serviceaccount_t,
     "role": role_t,
     "rolebinding": rolebinding_t
 }
