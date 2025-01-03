@@ -19,6 +19,10 @@ metadata:
   name: full-access-role
   namespace: ${cos}-${sanitized_domain}
 rules:
+  # Allow management of Secrets
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "list", "create", "update", "delete"]
   # Allow management of Deployments
 - apiGroups: ["apps"]
   resources: ["deployments"]
