@@ -8,9 +8,19 @@ python3 account.py --domains=example.com
 
 Command line to generate only service account, or role, or rolebinding
 ```
-python3 account.py --domains=example.com  --resources=serviceaccount
-python3 account.py --domains=example.com  --resources=role
-python3 account.py --domains=example.com  --resources=rolebinding
+python3 account.py --domain=example.com  --resources=serviceaccount
+python3 account.py --domain=example.com  --resources=role
+python3 account.py --domain=example.com  --resources=rolebinding
+```
+
+Create cluster role with binding
+```
+python3 cluster.py --domains=example.com  
+```
+
+Create cluster role binding
+```
+python3 cluster.py --domains=example.com,anotherdomain.com  --resources=clusterrolebinding
 ```
 
 Generate token to use in authentication for 90 days

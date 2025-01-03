@@ -94,7 +94,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 """
 
-
 resource_map = {
     "serviceaccount": serviceaccount_t,
     "role": role_t,
