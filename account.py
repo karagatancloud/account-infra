@@ -23,6 +23,10 @@ rules:
 - apiGroups: [""]
   resources: ["secrets"]
   verbs: ["get", "list", "create", "update", "delete"]
+  # Allow list of custom resource definitions
+- apiGroups: ["apiextensions.k8s.io"]
+  resources: ["customresourcedefinitions"]
+  verbs: ["get", "list"]
   # Allow management of Deployments
 - apiGroups: ["apps"]
   resources: ["deployments"]
