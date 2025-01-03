@@ -23,6 +23,10 @@ rules:
 - apiGroups: [""]
   resources: ["secrets"]
   verbs: ["get", "list", "create", "update", "delete"]
+  # Allow managenent of Locks
+- apiGroups: ["coordination.k8s.io"]
+  resources: ["leases"]
+  verbs: ["get", "list", "create", "update", "delete"]
   # Allow list of custom resource definitions
 - apiGroups: ["apiextensions.k8s.io"]
   resources: ["customresourcedefinitions"]
