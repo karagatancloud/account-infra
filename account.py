@@ -22,7 +22,7 @@ rules:
   # Allow management of Secrets
 - apiGroups: [""]
   resources: ["secrets"]
-  verbs: ["get", "list", "create", "update", "delete"]
+  verbs: ["get", "list", "create", "update", "patch", "delete"]
   # Allow managenent of Locks
 - apiGroups: ["coordination.k8s.io"]
   resources: ["leases"]
